@@ -615,6 +615,19 @@
             color: var(--coral);
         }
 
+        /* Animation Initial State */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Animation Active State */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
         /* Newsletter */
         .newsletter-section {
             background: #E8EDE9;
@@ -976,7 +989,7 @@
 
             <div class="row g-4">
                 <!-- Product 1 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal">
                     <div class="product-card">
                         <div class="product-image-container">
                             <img src="img/cosrx-snail-mucin.jpg" class="w-100 h-100" style="object-fit: cover;" alt="COSRX Snail Mucin">
@@ -997,7 +1010,7 @@
                 </div>
 
                 <!-- Product 2 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal">
                     <div class="product-card">
                         <div class="product-image-container">
                             <img src="img/biodance-mask.jpg" class="w-100 h-100" style="object-fit: cover;" alt="BIODANCE Collagen Mask">
@@ -1018,7 +1031,7 @@
                 </div>
 
                 <!-- Product 3 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal">
                     <div class="product-card">
                         <div class="product-image-container">
                             <img src="img/anua-cleansing.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Anua Cleansing Oil">
@@ -1039,7 +1052,7 @@
                 </div>
 
                 <!-- Product 4 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal">
                     <div class="product-card">
                         <div class="product-image-container">
                             <img src="img/beauty-of-joseon.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Beauty of Joseon Sunscreen">
@@ -1060,7 +1073,7 @@
                 </div>
 
                 <!-- Product 5 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal">
                     <div class="product-card">
                         <div class="product-image-container">
                             <img src="img/medicube-pore-pads.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Medicube Pore Pads">
@@ -1081,7 +1094,7 @@
                 </div>
 
                 <!-- Product 6 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal">
                     <div class="product-card">
                         <div class="product-image-container">
                             <img src="img/laneige-lip-mask.jpg" class="w-100 h-100" style="object-fit: cover;" alt="LANEIGE Lip Mask">
@@ -1464,6 +1477,25 @@ form.addEventListener("submit", async function(event) {
         submitBtn.disabled = false;
         submitBtn.innerHTML = "Try Again";
     });
+});
+
+        const observerOptions = {
+    threshold: 0.1 // Trigger when 10% of the element is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            // Optional: stop observing once it has revealed
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Target all elements with the .reveal class
+document.querySelectorAll('.reveal').forEach((el) => {
+    observer.observe(el);
 });
 
     </script>
