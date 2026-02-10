@@ -907,7 +907,7 @@
         </div>
     </section>
 
-    <img src="img/logo.jpg" class="img-circle" style="width: 50%;" alt="Seoul Glow - The Glass Skin Collective">
+    <img src="img/logo.jpg" class="img img-circle img-responsive" style="width: 50%; margin: 0 auto; border-radius: 50%;"  alt="Seoul Glow - The Glass Skin Collective">
 
     <!-- Intro Section -->
     <section id="intro">
@@ -1304,9 +1304,9 @@
                 <p>Get weekly K-Beauty drops, exclusive deals, viral TikTok finds, and glass skin tips delivered to your inbox!</p>
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
-                        <form class="newsletter-form">
+                        <form id="newsletterForm" action="https://formspree.io/f/xojdbzwd" method="POST">
                             <div class="mb-3">
-                                <input type="email" class="form-control form-control-lg" placeholder="Enter your email" required>
+                                <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter your email" required>
                             </div>
                             <button class="btn btn-lg w-100" type="submit">
                                 <i class="fa-solid fa-paper-plane"></i> Subscribe
@@ -1375,7 +1375,8 @@
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <img src="img/back-to-top.png" alt="Back to top">
+        <i class="fa-solid fa-arrows-rotate"></i>
+        <!--<img src="img/back-to-top.png" alt="Back to top">-->
     </button>
 
     <!-- Bootstrap 5.3.2 JS Bundle -->
