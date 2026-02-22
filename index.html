@@ -178,6 +178,33 @@
 	</script>
     
     <style>   
+
+		 .hero-section .btn:hover {
+        background: #2a4a35 !important;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(29, 49, 36, 0.3);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 2rem !important;
+        }
+        
+        .hero-tagline {
+            font-size: 1.3rem !important;
+        }
+        
+        .hero-subtitle {
+            font-size: 1rem !important;
+        }
+        
+        .hero-trust p {
+            font-size: 0.85rem !important;
+            text-align: center;
+        }
+	}
+		
 		 #blog .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 12px 40px rgba(29, 49, 36, 0.15) !important;
@@ -238,56 +265,66 @@
     </nav>
 
     <!--Hero Section-->
-<section id="hero" class="hero-section">
+<section id="hero" class="hero-section" style="background: linear-gradient(135deg, var(--cream) 0%, var(--light-sage) 100%); padding: 5rem 0; border-bottom: 3px solid var(--forest);">
     <div class="container text-center">
         <div class="row align-items-center">
 
             <div class="col-lg-6">
-                <p class="hero-tagline">The Glass Skin Collective. Curated Korean Skincare</p>
+                <p class="hero-tagline" style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: var(--coral); margin-bottom: 1rem; font-weight: 700;">The Glass Skin Collective. Curated Korean Skincare</p>
 
-                <h1 class="hero-title">
-                    Best Viral K-Beauty Products on Amazon (2026).
+                <h1 class="hero-title" style="font-family: 'Merriweather', serif; font-size: 3rem; font-weight: 700; color: var(--forest); line-height: 1.2; margin-bottom: 1.5rem;">
+                    Best Viral K-Beauty Products on Amazon <span style="color: var(--coral);">(2026)</span>
                 </h1>
 
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" style="font-size: 1.15rem; line-height: 1.7; color: #2d3748; margin-bottom: 2rem;">
                     Shop dermatologist-loved, viral K-Beauty formulas 
                     proven to hydrate, smooth, and brighten your skin.
 					Reviewed, ranked, and updated monthly. We analyze thousands of reviews so you don’t waste money.
                 </p>
 
                 <div class="hero-cta-group">
-                    <a href="#viral-products" class="btn btn-success mt-2 mb-2 btn-lg">View Top Rated Products on Amazon</a>
+                    <a href="#viral-products" class="btn-lg" style="background: var(--forest); color: white; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-block; transition: all 0.3s; border: none; font-size: 1.1rem;">View Top Rated Products on Amazon</a>
                 </div>
 
-                <p class="hero-trust">
-                    ⭐ 4.8/5 Rated • 10,000+ Happy Customers • Fast Shipping
-					Amazon Best Sellers • Verified Review Data • Updated Weekly
-                </p>
+                <div class="hero-trust" style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 2rem;">
+                       <p style="font-size: 0.95rem; color: var(--forest); margin-bottom: 0; font-weight: 600;">
+                        <i class="fa-solid fa-star" style="color: #FFD700;"></i> 4.8/5 Rated • 
+                        <i class="fa-solid fa-users" style="color: var(--coral);"></i> 10,000+ Happy Customers • 
+                        <i class="fa-solid fa-truck-fast" style="color: var(--coral);"></i> Fast Shipping
+                    </p>
+                    <p style="font-size: 0.9rem; color: #555; margin-bottom: 0;">
+                        <i class="fa-brands fa-amazon" style="color: var(--coral);"></i> Amazon Best Sellers • 
+                        <i class="fa-solid fa-shield-check" style="color: var(--coral);"></i> Verified Review Data • 
+                        <i class="fa-solid fa-clock-rotate-left" style="color: var(--coral);"></i> Updated Weekly
+                    </p>  
+				</div>
             </div>
 
-            <div class="col-lg-6">
+             <div class="col-lg-6">
                 <img src="img/im-from-rice-toner.jpg" 
-                     class="img-fluid rounded shadow"
-                     alt="K-Beauty Glass Skin Products">
+                     class="img-fluid rounded-4 shadow-lg"
+                     alt="K-Beauty Glass Skin Products"
+                     style="border: 3px solid var(--forest); max-width: 500px; width: 100%; display: block; margin: 0 auto;">
             </div>
 
         </div>
     </div>
 </section>
 
-           <!-- Amazon Associates Disclosure -->
-    <section class="py-3 bg-light border-top border-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p class="mb-0 small text-center text-muted">
-                        <i class="bi bi-info-circle me-1"></i>
-                        <strong>Amazon Associates Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases. This means if you click on an Amazon link from this website and make a purchase, we may receive a small commission at no extra cost to you. This helps us maintain our website and continue providing helpful content. We independently research and review products. Opinions are our own.
-                    </p>
-                </div>
+<!-- Amazon Associates Disclosure -->
+<section class="py-3" style="background: #fff8e1; border-top: 2px solid var(--coral); border-bottom: 2px solid var(--coral);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="mb-0 text-center" style="font-size: 0.9rem; color: #555; line-height: 1.6;">
+                    <i class="fa-solid fa-info-circle" style="color: var(--coral); margin-right: 0.5rem;"></i>
+                    <strong style="color: var(--forest);">Amazon Associates Disclosure:</strong> 
+                    As an Amazon Associate, we earn from qualifying purchases. This means if you click on an Amazon link from this website and make a purchase, we may receive a small commission at no extra cost to you. This helps us maintain our website and continue providing helpful content. We independently research and review products. Opinions are our own.
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     
 
     <!-- Intro Section -->
